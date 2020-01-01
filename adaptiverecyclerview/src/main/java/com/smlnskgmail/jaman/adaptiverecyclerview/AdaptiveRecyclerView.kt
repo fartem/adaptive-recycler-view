@@ -9,6 +9,9 @@ class AdaptiveRecyclerView : RecyclerView {
 
     private var messageView: View? = null
         set(value) {
+            checkNotNull(value) {
+                "messageView must not be null!"
+            }
             field = value
         }
 
