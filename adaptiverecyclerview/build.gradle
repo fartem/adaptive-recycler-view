@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.gitlab.arturbosch.detekt'
 
 android {
     compileSdkVersion 29
@@ -25,15 +26,22 @@ android {
     }
 }
 
+detekt {
+    failFast = true
+
+    def detektConfig = new File("$rootDir/detekt-config.yml")
+    new URL(
+            "https://raw.githubusercontent.com/fartem/repository-rules/master/kotlin/detekt/detect.yml"
+    ).withInputStream {
+        i -> detektConfig.withOutputStream {
+            it << i
+        }
+    }
+    config = files(detektConfig)
+    filters = ".*build.*,.*/resources/.*,.*/tmp/.*,*.java"
+}
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-
-    // Test
-    testImplementation 'junit:junit:4.12'
-
-    // AndroidTest
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
