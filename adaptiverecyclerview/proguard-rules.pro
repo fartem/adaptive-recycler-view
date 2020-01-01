@@ -1,0 +1,1 @@
+-keep public class com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
