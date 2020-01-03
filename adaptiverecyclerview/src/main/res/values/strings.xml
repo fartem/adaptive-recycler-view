@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="adaptive_message_view_text">List of data is empty!</string>
+    <string name="adaptive_message_view_content_description">List of data is empty!</string>
+</resources>

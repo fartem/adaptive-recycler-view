@@ -9,7 +9,7 @@ Adaptive Recycler View
 About
 -------------------
 
-Library for creating RecyclerView with progress indicator and message for empty list of data.
+Library for creating RecyclerView with warning message of data availability.
 
 Contributors
 -------------------

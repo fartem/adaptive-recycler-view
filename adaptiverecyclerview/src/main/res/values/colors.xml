@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="adaptive_message_view_image_color">#757575</color>
+    <color name="adaptive_message_view_text_color">#757575</color>
+</resources>
