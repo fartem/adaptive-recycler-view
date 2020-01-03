@@ -3,7 +3,8 @@
 Adaptive Recycler View
 =======================
 
-![Open issues](https://img.shields.io/github/issues-raw/fartem/adaptive-recycler-view.svg?color=ff534a&style=flat-square)
+![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)
+![Open issues](https://img.shields.io/github/issues-raw/fartem/adaptive-recycler-view.svg?color=ff534a)
 
 About
 -------------------
