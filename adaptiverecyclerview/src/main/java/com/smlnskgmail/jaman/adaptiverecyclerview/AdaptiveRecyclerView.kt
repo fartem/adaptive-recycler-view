@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class AdaptiveRecyclerView : RecyclerView {
 
-    private var messageView: View? = null
+    var messageView: View? = null
         set(value) {
             checkNotNull(value) {
                 "messageView must not be null!"
@@ -15,7 +15,7 @@ class AdaptiveRecyclerView : RecyclerView {
             field = value
         }
 
-    private val dataObserver = object : RecyclerView.AdapterDataObserver() {
+    private val dataObserver = object : AdapterDataObserver() {
         override fun onChanged() {
             checkItemsList()
         }
@@ -26,8 +26,8 @@ class AdaptiveRecyclerView : RecyclerView {
                     visibility = View.GONE
                     messageView!!.visibility == View.VISIBLE
                 } else {
-                    visibility = View.VISIBLE
                     messageView!!.visibility == View.GONE
+                    visibility = View.VISIBLE
                 }
             }
         }
@@ -65,10 +65,14 @@ class AdaptiveRecyclerView : RecyclerView {
     )
 
     override fun setAdapter(adapter: Adapter<*>?) {
-        adapter?.unregisterAdapterDataObserver(dataObserver)
+        if (getAdapter() != null) {
+            getAdapter()!!.unregisterAdapterDataObserver(dataObserver)
+        }
         super.setAdapter(adapter)
-        adapter?.registerAdapterDataObserver(dataObserver)
-        dataObserver.onChanged()
+        if (adapter != null) {
+            adapter.registerAdapterDataObserver(dataObserver)
+            dataObserver.onChanged()
+        }
     }
 
 }
