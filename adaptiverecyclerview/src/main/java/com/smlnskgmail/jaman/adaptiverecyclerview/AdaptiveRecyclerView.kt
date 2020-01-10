@@ -22,12 +22,12 @@ class AdaptiveRecyclerView : RecyclerView {
 
         fun checkItemsList() {
             if (adapter != null) {
-                if (adapter!!.itemCount == 0) {
-                    visibility = View.GONE
-                    messageView!!.visibility == View.VISIBLE
+                visibility = if (adapter!!.itemCount == 0) {
+                    messageView!!.visibility = View.VISIBLE
+                    View.GONE
                 } else {
-                    messageView!!.visibility == View.GONE
-                    visibility = View.VISIBLE
+                    messageView!!.visibility = View.GONE
+                    View.VISIBLE
                 }
             }
         }
