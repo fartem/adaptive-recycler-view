@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adaptive Recycler View Demo</string>
+
+    <string name="text_message_list">Items list is empty!</string>
+
+    <string name="text_refresh_button_load">Load</string>
+    <string name="text_refresh_button_clean">Clean</string>
+</resources>

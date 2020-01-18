@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:arv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
+        android:id="@+id/demo_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/demo_list_refresh"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveMessageView
+        android:id="@+id/demo_list_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/demo_list_refresh"
+        arv:message_image="@drawable/ic_error"
+        arv:message_text="@string/text_message_list" />
+
+    <Button
+        android:id="@+id/demo_list_refresh"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_default"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="@string/text_refresh_button_load" />
+
+</RelativeLayout>
