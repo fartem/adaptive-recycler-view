@@ -2,6 +2,8 @@
 <resources>
     <declare-styleable name="MessageViewAttrs">
         <attr name="message_image" format="reference" />
+        <attr name="message_image_tint" format="color" />
         <attr name="message_text" format="string" />
+        <attr name="message_text_color" format="color" />
     </declare-styleable>
 </resources>

@@ -18,7 +18,9 @@
         android:layout_height="match_parent"
         android:layout_above="@id/demo_list_refresh"
         arv:message_image="@drawable/ic_error"
-        arv:message_text="@string/text_message_list" />
+        arv:message_image_tint="@color/colorPrimary"
+        arv:message_text="@string/text_message_list"
+        arv:message_text_color="@color/colorPrimary" />
 
     <Button
         android:id="@+id/demo_list_refresh"

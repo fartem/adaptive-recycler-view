@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 
 class AdaptiveMessageView : LinearLayout {
 
@@ -43,10 +44,33 @@ class AdaptiveMessageView : LinearLayout {
                     )
                     messageImage.setImageDrawable(image)
 
+                    val defaultImageTint = ContextCompat.getColor(
+                        context,
+                        R.color.adaptive_message_view_image_color
+                    )
+                    val imageTint = getColor(
+                        R.styleable.MessageViewAttrs_message_image_tint,
+                        defaultImageTint
+                    )
+                    DrawableCompat.setTint(
+                        messageImage.drawable,
+                        imageTint
+                    )
+
                     val message = getString(
                         R.styleable.MessageViewAttrs_message_text
                     ) ?: context.getString(R.string.adaptive_message_view_text)
                     messageText.text = message
+
+                    val defaultMessageColor = ContextCompat.getColor(
+                        context,
+                        R.color.adaptive_message_view_text_color
+                    )
+                    val messageColor = getColor(
+                        R.styleable.MessageViewAttrs_message_text_color,
+                        defaultMessageColor
+                    )
+                    messageText.setTextColor(messageColor)
                 } finally {
                     recycle()
                 }
