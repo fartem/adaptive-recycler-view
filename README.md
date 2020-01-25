@@ -1,4 +1,4 @@
-<img src="media/ic_app.png" height="100px" />
+<img src="media/logo/ic_app.png" height="100px" />
 
 Adaptive Recycler View
 =============
@@ -45,7 +45,7 @@ Kotlin:
 adaptive_recycler_view.messageView = adaptive_message_view
 ```
 
-__`AdaptiveRecyclerView` mathods__:
+__`AdaptiveRecyclerView` methods__:
 
 * `setMessageView(messageView: View)` - set message view.
 
