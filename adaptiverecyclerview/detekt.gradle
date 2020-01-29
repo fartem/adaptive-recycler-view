@@ -1,0 +1,16 @@
+apply plugin: 'io.gitlab.arturbosch.detekt'
+
+detekt {
+    failFast = true
+
+    def detektConfig = new File("$rootDir/detekt-config.yml")
+    new URL(
+            "https://raw.githubusercontent.com/fartem/repository-rules/master/kotlin/detekt/detect.yml"
+    ).withInputStream {
+        i -> detektConfig.withOutputStream {
+            it << i
+        }
+    }
+    config = files(detektConfig)
+    filters = ".*build.*,.*/resources/.*,.*/tmp/.*,*.java"
+}

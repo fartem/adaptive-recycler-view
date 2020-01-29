@@ -3,6 +3,7 @@ package com.smlnskgmail.jaman.adaptiverecyclerview
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -71,6 +72,15 @@ class AdaptiveMessageView : LinearLayout {
                         defaultMessageColor
                     )
                     messageText.setTextColor(messageColor)
+
+                    val messageSize = getDimensionPixelSize(
+                        R.styleable.MessageViewAttrs_message_text_size,
+                        14
+                    )
+                    messageText.setTextSize(
+                        TypedValue.COMPLEX_UNIT_PX,
+                        messageSize.toFloat()
+                    )
                 } finally {
                     recycle()
                 }
