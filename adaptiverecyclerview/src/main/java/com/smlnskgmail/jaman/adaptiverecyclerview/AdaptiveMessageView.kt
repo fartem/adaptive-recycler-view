@@ -73,9 +73,12 @@ class AdaptiveMessageView : LinearLayout {
                     )
                     messageText.setTextColor(messageColor)
 
+                    val defaultMessageSize = context.resources.getDimensionPixelSize(
+                        R.dimen.adaptive_message_view_text_size
+                    )
                     val messageSize = getDimensionPixelSize(
                         R.styleable.MessageViewAttrs_message_text_size,
-                        14
+                        defaultMessageSize
                     )
                     messageText.setTextSize(
                         TypedValue.COMPLEX_UNIT_PX,

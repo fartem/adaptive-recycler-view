@@ -14,11 +14,32 @@ Library for creating RecyclerView with warning message of data availability.
 Usage
 -------------
 
+### Gradle dependency
+
+__In root build.gradle:__
+
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven {
+            url 'https://dl.bintray.com/fartem/android'
+        }
+    }
+}
+```
+
+__In project level build file:__
+
+```gradle
+implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
+```
+
 ### Code
 
 Put `AdaptiveRecyclerView` and `AdaptiveMessageView` in same layout file.
 
-__Configure `AdaptiveMessageView`:__
+__`AdaptiveMessageView`:__
 
 Java / Kotlin:
 ```java
@@ -33,7 +54,7 @@ __`AdaptiveMessageView` mathods__:
 * `setMessageText(messageResId: Int)` - set text for message from resource id; 
 * `setMessageText(message: String)` - set text for message.
 
-__Configure `AdaptiveRecyclerView`:__
+__`AdaptiveRecyclerView`:__
 
 Java:
 ```java
@@ -91,10 +112,10 @@ __Default strings keys for elements:__
 * `adaptive_message_view_text` - message text;
 * `adaptive_message_view_content_description` - image content description.
 
-Gradle dependency
+Demo
 -------------
 
-
+<img src="media/qrcodes/github_download.png" height="150px" />
 
 Contributors
 -------------
