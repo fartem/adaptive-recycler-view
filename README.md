@@ -16,7 +16,7 @@ Usage
 
 ### Gradle dependency
 
-__In root build.gradle:__
+In root build.gradle:
 
 ```gradle
 allprojects {
@@ -29,7 +29,7 @@ allprojects {
 }
 ```
 
-__In project level build file:__
+In project level build file:
 
 ```gradle
 implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
@@ -50,12 +50,12 @@ Declaring as an AndroidX RecyclerView (Layout manager can be set up from code).
 
 #### Code
 
-__Java:__
+Java
 ```java
 adaptiveRecyclerView.setMessageView(adaptiveMessageView);
 ```
 
-__Kotlin:__
+Kotlin
 ```kotlin
 adaptive_recycler_view.messageView = adaptive_message_view
 ```
@@ -70,6 +70,7 @@ __Methods__:
 #### XML
 
 Must be declared in layout with AdaptiveRecyclerView. It can be customized with parameters (all available parameters contains in example with `arv`).
+
 ```xml
 <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveMessageView
         android:layout_width="match_parent"
