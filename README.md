@@ -35,42 +35,9 @@ __In project level build file:__
 implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
 ```
 
-### Code
-
-Put `AdaptiveRecyclerView` and `AdaptiveMessageView` in same layout file.
-
-__`AdaptiveMessageView`:__
-
-Java / Kotlin:
-```java
-adaptiveMessageView.setImage(messageImage);
-adaptiveMessageView.setMessageText(messageText);
-```
-
-__`AdaptiveMessageView` mathods__:
-
-* `setImage(imageResId: Int)` - set drawable for image from resource id;
-* `setImage(drawable: Drawable)` - set drawable for image;
-* `setMessageText(messageResId: Int)` - set text for message from resource id; 
-* `setMessageText(message: String)` - set text for message.
-
-__`AdaptiveRecyclerView`:__
-
-Java:
-```java
-adaptiveRecyclerView.setMessageView(adaptiveMessageView);
-```
-
-Kotlin:
-```kotlin
-adaptive_recycler_view.messageView = adaptive_message_view
-```
-
-__`AdaptiveRecyclerView` methods__:
-
-* `setMessageView(messageView: View)` - set message view.
-
 ### AdaptiveRecyclerView
+
+#### XML
 
 Declaring as an AndroidX RecyclerView (Layout manager can be set up from code).
 
@@ -81,7 +48,26 @@ Declaring as an AndroidX RecyclerView (Layout manager can be set up from code).
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 ```
 
-__AdaptiveMessageView__
+#### Code
+
+__Java:__
+```java
+adaptiveRecyclerView.setMessageView(adaptiveMessageView);
+```
+
+__Kotlin:__
+```kotlin
+adaptive_recycler_view.messageView = adaptive_message_view
+```
+
+__Methods__:
+
+* `setMessageView(messageView: View)` - set message view.
+
+
+### AdaptiveMessageView
+
+#### XML
 
 Must be declared in layout with AdaptiveRecyclerView. It can be customized with parameters (all available parameters contains in example with `arv`).
 ```xml
@@ -91,14 +77,16 @@ Must be declared in layout with AdaptiveRecyclerView. It can be customized with 
         arv:message_image="@drawable/ic_error"
         arv:message_image_tint="@color/colorPrimary"
         arv:message_text="@string/text_message_list"
+        arv:message_text_size="@dimen/medium_text"
         arv:message_text_color="@color/colorPrimary" />
 ```
 
-__`AdaptiveMessageView` parameters:__
+__Parameters:__
 
 * `message_image` - set custom image;
 * `message_image_tint` - set tint for image (default or custom);
 * `message_text` - set message text;
+* `message_text_size` - set message size;
 * `message_text_color` - set message text color.
 
 __If you want to use default image or text, you can override dimension from the library:__
