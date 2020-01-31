@@ -5,6 +5,7 @@ Adaptive Recycler View
 
 ![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)
 ![Open issues](https://img.shields.io/github/issues-raw/fartem/adaptive-recycler-view.svg?color=ff534a)
+[![Download](https://api.bintray.com/packages/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/images/download.svg?version=0.1.1) ](https://bintray.com/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/0.1.1/link)
 
 About
 -------------
