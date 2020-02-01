@@ -20,8 +20,8 @@ Second screenshot - example of app state with loaded items in RecyclerView.
 
 <br/>
 <p align="center">
-  <img src="media/screenshots/screenshot_01.png" width="170" />
-  <img src="media/screenshots/screenshot_02.png" width="170" />
+  <img src="media/screenshots/screenshot_01.png" width="250" />
+  <img src="media/screenshots/screenshot_02.png" width="250" />
 </p>
 
 Usage
