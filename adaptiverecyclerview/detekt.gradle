@@ -5,7 +5,7 @@ detekt {
 
     def detektConfig = new File("$rootDir/detekt-config.yml")
     new URL(
-            "https://raw.githubusercontent.com/fartem/repository-rules/master/kotlin/detekt/detect.yml"
+            "https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detect.yml"
     ).withInputStream {
         i -> detektConfig.withOutputStream {
             it << i
