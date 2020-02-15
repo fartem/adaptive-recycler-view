@@ -6,5 +6,6 @@
         <attr name="message_text" format="string" />
         <attr name="message_text_size" format="dimension" />
         <attr name="message_text_color" format="color" />
+        <attr name="message_text_at_center" format="boolean" />
     </declare-styleable>
 </resources>

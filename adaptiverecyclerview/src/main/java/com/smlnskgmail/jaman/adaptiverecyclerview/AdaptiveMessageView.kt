@@ -1,9 +1,11 @@
 package com.smlnskgmail.jaman.adaptiverecyclerview
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -38,56 +40,70 @@ class AdaptiveMessageView : LinearLayout {
                 0
             ).apply {
                 try {
-                    val image = getDrawable(
-                        R.styleable.MessageViewAttrs_message_image
-                    ) ?: ContextCompat.getDrawable(
-                        context, R.drawable.ic_adaptive_message_view_image
-                    )
-                    messageImage.setImageDrawable(image)
-
-                    val defaultImageTint = ContextCompat.getColor(
-                        context,
-                        R.color.adaptive_message_view_image_color
-                    )
-                    val imageTint = getColor(
-                        R.styleable.MessageViewAttrs_message_image_tint,
-                        defaultImageTint
-                    )
-                    DrawableCompat.setTint(
-                        messageImage.drawable,
-                        imageTint
-                    )
-
-                    val message = getString(
-                        R.styleable.MessageViewAttrs_message_text
-                    ) ?: context.getString(R.string.adaptive_message_view_text)
-                    messageText.text = message
-
-                    val defaultMessageColor = ContextCompat.getColor(
-                        context,
-                        R.color.adaptive_message_view_text_color
-                    )
-                    val messageColor = getColor(
-                        R.styleable.MessageViewAttrs_message_text_color,
-                        defaultMessageColor
-                    )
-                    messageText.setTextColor(messageColor)
-
-                    val defaultMessageSize = context.resources.getDimensionPixelSize(
-                        R.dimen.adaptive_message_view_text_size
-                    )
-                    val messageSize = getDimensionPixelSize(
-                        R.styleable.MessageViewAttrs_message_text_size,
-                        defaultMessageSize
-                    )
-                    messageText.setTextSize(
-                        TypedValue.COMPLEX_UNIT_PX,
-                        messageSize.toFloat()
-                    )
+                    setImage(this)
+                    setMessage(this)
                 } finally {
                     recycle()
                 }
             }
+        }
+    }
+
+    private fun setImage(typedArray: TypedArray) {
+        val image = typedArray.getDrawable(
+            R.styleable.MessageViewAttrs_message_image
+        ) ?: ContextCompat.getDrawable(
+            context, R.drawable.ic_adaptive_message_view_image
+        )
+        messageImage.setImageDrawable(image)
+        val defaultImageTint = ContextCompat.getColor(
+            context,
+            R.color.adaptive_message_view_image_color
+        )
+        val imageTint = typedArray.getColor(
+            R.styleable.MessageViewAttrs_message_image_tint,
+            defaultImageTint
+        )
+        DrawableCompat.setTint(
+            messageImage.drawable,
+            imageTint
+        )
+    }
+
+    private fun setMessage(typedArray: TypedArray) {
+        val message = typedArray.getString(
+            R.styleable.MessageViewAttrs_message_text
+        ) ?: context.getString(R.string.adaptive_message_view_text)
+        messageText.text = message
+
+        val defaultMessageColor = ContextCompat.getColor(
+            context,
+            R.color.adaptive_message_view_text_color
+        )
+        val messageColor = typedArray.getColor(
+            R.styleable.MessageViewAttrs_message_text_color,
+            defaultMessageColor
+        )
+        messageText.setTextColor(messageColor)
+
+        val defaultMessageSize = context.resources.getDimensionPixelSize(
+            R.dimen.adaptive_message_view_text_size
+        )
+        val messageSize = typedArray.getDimensionPixelSize(
+            R.styleable.MessageViewAttrs_message_text_size,
+            defaultMessageSize
+        )
+        messageText.setTextSize(
+            TypedValue.COMPLEX_UNIT_PX,
+            messageSize.toFloat()
+        )
+
+        val messageAtCenter = typedArray.getBoolean(
+            R.styleable.MessageViewAttrs_message_text_at_center,
+            false
+        )
+        if (messageAtCenter) {
+            messageText.gravity = Gravity.CENTER
         }
     }
 

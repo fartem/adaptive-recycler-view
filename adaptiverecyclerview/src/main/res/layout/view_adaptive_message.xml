@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/adaptive_message_view_text_margin_top"
+        android:padding="@dimen/adaptive_message_view_text_padding"
         android:layout_gravity="center"
         android:textColor="@color/adaptive_message_view_text_color"
         android:textSize="@dimen/adaptive_message_view_text_size"

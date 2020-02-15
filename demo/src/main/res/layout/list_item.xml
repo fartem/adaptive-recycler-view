@@ -6,6 +6,8 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/padding_default"
     android:foreground="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
     tools:ignore="UnusedAttribute">
 
     <TextView

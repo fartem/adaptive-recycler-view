@@ -103,10 +103,12 @@ __Parameters:__
 * `message_text` - set message text;
 * `message_text_size` - set message size;
 * `message_text_color` - set message text color.
+* `message_text_at_center` - set message TextView gravity at `Gravity.CENTER`.
 
 __If you want to use default image or text, you can override dimension from the library:__
 
 * `adaptive_message_view_text_margin_top` - distance between image and message, in dp;
+* `adaptive_message_view_text_padding` - message padding, in dp;
 * `adaptive_message_view_image_size` - image size, in dp;
 * `adaptive_message_view_text_size` - message text size, in sp.
 
