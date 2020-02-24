@@ -4,7 +4,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertNotNull
 import org.junit.Test
 
-class MessageViewSetTest {
+class MessageViewSetTest : BaseUITest() {
 
     private val context = InstrumentationRegistry.getInstrumentation().context
 

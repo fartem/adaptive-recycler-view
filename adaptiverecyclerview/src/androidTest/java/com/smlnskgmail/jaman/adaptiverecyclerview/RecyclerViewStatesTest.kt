@@ -8,7 +8,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class RecyclerViewStatesTest {
+class RecyclerViewStatesTest : BaseUITest() {
 
     private val context = InstrumentationRegistry.getInstrumentation().context
 
@@ -90,7 +90,9 @@ class RecyclerViewStatesTest {
             holder.bind(testItems[position])
         }
 
-        inner class TestRecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        inner class TestRecyclerViewHolder(
+            view: View
+        ) : RecyclerView.ViewHolder(view) {
 
             fun bind(testItem: TestItem) {
 
