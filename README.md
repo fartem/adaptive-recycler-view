@@ -3,10 +3,10 @@
 Adaptive Recycler View
 =============
 
-![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)
-![Codecov](https://img.shields.io/codecov/c/github/fartem/adaptive-recycler-view)
+[![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)](https://travis-ci.org/fartem/adaptive-recycler-view)
+[![Codecov](https://img.shields.io/codecov/c/github/fartem/adaptive-recycler-view)](https://codecov.io/gh/fartem/adaptive-recycler-view)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AdaptiveRecyclerView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/8036)
-![Open issues](https://img.shields.io/github/issues-raw/fartem/adaptive-recycler-view.svg?color=ff534a)
+[![Open issues](https://img.shields.io/github/issues-raw/fartem/adaptive-recycler-view.svg?color=ff534a)](https://github.com/fartem/adaptive-recycler-view/issues)
 [![Download](https://api.bintray.com/packages/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/images/download.svg?version=0.1.2) ](https://bintray.com/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/0.1.2/link)
 
 About
