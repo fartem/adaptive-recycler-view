@@ -13,8 +13,6 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName '0.1.2'
-
-        testInstrumentationRunner 'com.smlnskgmail.jaman.adaptiverecyclerview.runner.AndroidJacocoTestRunner'
     }
     buildTypes {
         debug {
@@ -28,14 +26,20 @@ android {
     }
     testOptions {
         unitTests {
+            includeAndroidResources = true
+
             all {
                 jacoco {
                     includeNoLocationClasses = true
                 }
             }
-            includeAndroidResources = true
         }
     }
+}
+
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+    jacoco.excludes = ['jdk.internal.*']
 }
 
 dependencies {
@@ -45,8 +49,6 @@ dependencies {
     // Unit tests
     testImplementation 'junit:junit:4.13'
 
-    // Android tests
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test:rules:1.2.0'
-    androidTestImplementation 'androidx.test:core:1.2.0'
+    // Robolectric
+    testImplementation "org.robolectric:robolectric:4.3.1"
 }

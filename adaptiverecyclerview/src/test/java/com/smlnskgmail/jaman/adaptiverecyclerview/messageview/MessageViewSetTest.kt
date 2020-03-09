@@ -1,29 +1,43 @@
 package com.smlnskgmail.jaman.adaptiverecyclerview.messageview
 
 import androidx.core.content.ContextCompat
+import androidx.test.platform.app.InstrumentationRegistry
 import com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveMessageView
+import com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
 import com.smlnskgmail.jaman.adaptiverecyclerview.BaseUITest
 import com.smlnskgmail.jaman.adaptiverecyclerview.R
 import kotlinx.android.synthetic.main.view_adaptive_message.view.*
-import org.junit.Assert.assertEquals
+import org.junit.Assert
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 
-class MessageViewTest : BaseUITest() {
+class MessageViewSetTest : BaseUITest() {
+
+    private val context = InstrumentationRegistry.getInstrumentation().context
 
     @Test
-    fun checkConstructors() {
-        AdaptiveMessageView(
-            context()
+    fun checkForNonNullView() {
+        val recyclerView =
+            AdaptiveRecyclerView(
+                context
+            )
+        recyclerView.messageView =
+            AdaptiveMessageView(
+                context
+            )
+
+        assertNotNull(
+            recyclerView.messageView
         )
-        AdaptiveMessageView(
-            context(),
-            null
-        )
-        AdaptiveMessageView(
-            context(),
-            null,
-            0
-        )
+    }
+
+    @Test(expected = IllegalStateException::class)
+    fun checkForNullView() {
+        val adaptiveRecyclerView =
+            AdaptiveRecyclerView(
+                context
+            )
+        adaptiveRecyclerView.messageView = null
     }
 
     @Test
@@ -58,7 +72,7 @@ class MessageViewTest : BaseUITest() {
         messageView.setMessageText(
             R.string.adaptive_message_view_text
         )
-        assertEquals(
+        Assert.assertEquals(
             message,
             messageTextView.text.toString()
         )
@@ -67,7 +81,7 @@ class MessageViewTest : BaseUITest() {
         messageView.setMessageText(
             message
         )
-        assertEquals(
+        Assert.assertEquals(
             message,
             messageTextView.text.toString()
         )
