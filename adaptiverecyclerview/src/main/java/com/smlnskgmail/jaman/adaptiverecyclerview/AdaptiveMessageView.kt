@@ -53,7 +53,8 @@ class AdaptiveMessageView : LinearLayout {
         val image = typedArray.getDrawable(
             R.styleable.MessageViewAttrs_message_image
         ) ?: ContextCompat.getDrawable(
-            context, R.drawable.ic_adaptive_message_view_image
+            context,
+            R.drawable.ic_adaptive_message_view_image
         )
         messageImage.setImageDrawable(image)
         val defaultImageTint = ContextCompat.getColor(
