@@ -5,6 +5,7 @@ Adaptive Recycler View
 
 [![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)](https://travis-ci.org/fartem/adaptive-recycler-view)
 [![Codecov](https://img.shields.io/codecov/c/github/fartem/adaptive-recycler-view)](https://codecov.io/gh/fartem/adaptive-recycler-view)
+[![Hits-of-Code](https://hitsofcode.com/github/fartem/adaptive-recycler-view)](https://hitsofcode.com/view/github/fartem/adaptive-recycler-view)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AdaptiveRecyclerView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/8036)
 [![Download](https://api.bintray.com/packages/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/images/download.svg?version=0.1.2) ](https://bintray.com/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/0.1.2/link)
 
