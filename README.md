@@ -4,6 +4,7 @@ Adaptive Recycler View
 =============
 
 [![Travis CI](https://img.shields.io/travis/fartem/adaptive-recycler-view)](https://travis-ci.org/fartem/adaptive-recycler-view)
+[![Codebeat](https://codebeat.co/badges/820d5883-5346-41c1-a827-594d470ab38a)](https://codebeat.co/projects/github-com-fartem-adaptive-recycler-view-master)
 [![Codecov](https://img.shields.io/codecov/c/github/fartem/adaptive-recycler-view)](https://codecov.io/gh/fartem/adaptive-recycler-view)
 [![Hits-of-Code](https://hitsofcode.com/github/fartem/adaptive-recycler-view)](https://hitsofcode.com/view/github/fartem/adaptive-recycler-view)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AdaptiveRecyclerView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/8036)
