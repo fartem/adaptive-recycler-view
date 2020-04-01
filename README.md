@@ -78,8 +78,9 @@ adaptive_recycler_view.messageView = adaptive_message_view
 
 __Methods__:
 
-* `setMessageView(messageView: View)` - set message view.
-
+| Method | Arguments | Description |
+| --- | --- | --- |
+| setMessageView | messageView: View | Set message view |
 
 ### AdaptiveMessageView
 
