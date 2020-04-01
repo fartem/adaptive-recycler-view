@@ -100,24 +100,30 @@ Must be declared in layout with AdaptiveRecyclerView. It can be customized with 
 
 __Parameters:__
 
-* `message_image` - set custom image;
-* `message_image_tint` - set tint for image (default or custom);
-* `message_text` - set message text;
-* `message_text_size` - set message size;
-* `message_text_color` - set message text color.
-* `message_text_at_center` - set message TextView gravity at `Gravity.CENTER`.
+| Parameter | Description |
+| --- | --- |
+| `message_image` | Set custom image |
+| `message_image_tint` | Set tint for image (default or custom) |
+| `message_text` | Set message text |
+| `message_text_size` | Set message size |
+| `message_text_color` | Set message text color |
+| `message_text_at_center` | Set message TextView gravity at `Gravity.CENTER` |
 
 __If you want to use default image or text, you can override dimension from the library:__
 
-* `adaptive_message_view_text_margin_top` - distance between image and message, in dp;
-* `adaptive_message_view_text_padding` - message padding, in dp;
-* `adaptive_message_view_image_size` - image size, in dp;
-* `adaptive_message_view_text_size` - message text size, in sp.
+| Dimension | Description |
+| --- | --- |
+| `adaptive_message_view_text_margin_top` | Distance between image and message |
+| `adaptive_message_view_text_padding` | Message padding |
+| `adaptive_message_view_image_size` | Image size |
+| `adaptive_message_view_text_size` | Message text size |
 
 __Default strings keys for elements:__
 
-* `adaptive_message_view_text` - message text;
-* `adaptive_message_view_content_description` - image content description.
+| String key | Description |
+| --- | --- |
+| `adaptive_message_view_text` | Message text |
+| `adaptive_message_view_content_description` | Image content description |
 
 Demo
 -------------
