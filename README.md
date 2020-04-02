@@ -32,7 +32,7 @@ Usage
 
 ### Gradle dependency
 
-In root build.gradle:
+In root `build.gradle`:
 
 ```gradle
 allprojects {
@@ -45,7 +45,7 @@ allprojects {
 }
 ```
 
-In project level build file:
+In project level `build.gradle`:
 
 ```gradle
 implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
@@ -54,8 +54,6 @@ implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
 ### AdaptiveRecyclerView
 
 #### XML
-
-Declaring as an AndroidX RecyclerView (Layout manager can be set up from code).
 
 ```xml
 <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
@@ -86,7 +84,7 @@ __Methods__
 
 #### XML
 
-Must be declared in layout with AdaptiveRecyclerView. It can be customized with parameters (all available parameters contains in example with `arv`).
+Must be declared in layout with AdaptiveRecyclerView.
 
 ```xml
 <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveMessageView
