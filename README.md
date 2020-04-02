@@ -76,7 +76,7 @@ Kotlin
 adaptive_recycler_view.messageView = adaptive_message_view
 ```
 
-__Methods__:
+__Methods__
 
 | Method | Arguments | Description |
 | --- | --- | --- |
@@ -99,7 +99,7 @@ Must be declared in layout with AdaptiveRecyclerView. It can be customized with 
         arv:message_text_color="@color/colorPrimary" />
 ```
 
-__Parameters:__
+__Parameters__
 
 | Parameter | Description |
 | --- | --- |
@@ -110,7 +110,7 @@ __Parameters:__
 | `message_text_color` | Set message text color |
 | `message_text_at_center` | Set message TextView gravity at `Gravity.CENTER` |
 
-__If you want to use default image or text, you can override dimension from the library:__
+__Dimension__
 
 | Dimension | Description |
 | --- | --- |
@@ -119,7 +119,7 @@ __If you want to use default image or text, you can override dimension from the 
 | `adaptive_message_view_image_size` | Image size |
 | `adaptive_message_view_text_size` | Message text size |
 
-__Default strings keys for elements:__
+__Strings keys__
 
 | String key | Description |
 | --- | --- |
