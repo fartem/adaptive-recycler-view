@@ -78,7 +78,7 @@ __Methods__
 
 | Method | Arguments | Description |
 | --- | --- | --- |
-| setMessageView | messageView: View | Set message view |
+| `setMessageView` | messageView: View | Set message view |
 
 ### AdaptiveMessageView
 
