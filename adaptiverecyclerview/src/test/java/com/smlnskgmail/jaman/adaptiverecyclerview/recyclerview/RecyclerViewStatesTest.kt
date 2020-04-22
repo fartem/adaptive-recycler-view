@@ -6,8 +6,7 @@ import com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
 import com.smlnskgmail.jaman.adaptiverecyclerview.BaseUITest
 import com.smlnskgmail.jaman.adaptiverecyclerview.recyclerview.list.TestItem
 import com.smlnskgmail.jaman.adaptiverecyclerview.recyclerview.list.TestRecyclerViewAdapter
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
+import org.junit.Assert.*
 import org.junit.Test
 
 class RecyclerViewStatesTest : BaseUITest() {
@@ -99,6 +98,19 @@ class RecyclerViewStatesTest : BaseUITest() {
         recyclerView.adapter = adapter
 
         assertNotNull(
+            recyclerView.adapter
+        )
+    }
+
+    @Test
+    fun checkNullAdapter() {
+        val recyclerView =
+            AdaptiveRecyclerView(
+                context()
+            )
+        recyclerView.adapter = null
+
+        assertNull(
             recyclerView.adapter
         )
     }
