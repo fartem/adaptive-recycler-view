@@ -21,14 +21,12 @@ class AdaptiveRecyclerView : RecyclerView {
         }
 
         fun checkItemsList() {
-            if (adapter != null) {
-                visibility = if (adapter!!.itemCount == 0) {
-                    messageView!!.visibility = View.VISIBLE
-                    View.GONE
-                } else {
-                    messageView!!.visibility = View.GONE
-                    View.VISIBLE
-                }
+            visibility = if (adapter!!.itemCount == 0) {
+                messageView!!.visibility = View.VISIBLE
+                View.GONE
+            } else {
+                messageView!!.visibility = View.GONE
+                View.VISIBLE
             }
         }
 
@@ -66,11 +64,15 @@ class AdaptiveRecyclerView : RecyclerView {
 
     override fun setAdapter(adapter: Adapter<*>?) {
         if (getAdapter() != null) {
-            getAdapter()!!.unregisterAdapterDataObserver(dataObserver)
+            getAdapter()!!.unregisterAdapterDataObserver(
+                dataObserver
+            )
         }
         super.setAdapter(adapter)
         if (adapter != null) {
-            adapter.registerAdapterDataObserver(dataObserver)
+            adapter.registerAdapterDataObserver(
+                dataObserver
+            )
             dataObserver.onChanged()
         }
     }
