@@ -48,7 +48,7 @@ allprojects {
 In project level `build.gradle`:
 
 ```gradle
-implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:version'
+implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:<version>'
 ```
 
 ### AdaptiveRecyclerView
