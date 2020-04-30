@@ -22,10 +22,10 @@ class AdaptiveRecyclerView : RecyclerView {
 
         fun checkItemsList() {
             visibility = if (adapter!!.itemCount == 0) {
-                messageView!!.visibility = View.VISIBLE
+                messageView?.visibility = View.VISIBLE
                 View.GONE
             } else {
-                messageView!!.visibility = View.GONE
+                messageView?.visibility = View.GONE
                 View.VISIBLE
             }
         }

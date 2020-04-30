@@ -12,16 +12,14 @@ android {
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
-        versionName '1.0.0'
+        versionName '1.1.0'
     }
     buildTypes {
         debug {
             testCoverageEnabled = true
         }
         release {
-            minifyEnabled false
-
-            testCoverageEnabled = true
+            testCoverageEnabled = false
         }
     }
     testOptions {
