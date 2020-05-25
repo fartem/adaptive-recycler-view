@@ -25,14 +25,14 @@ class TestRecyclerViewAdapter(
         holder: TestRecyclerViewHolder,
         position: Int
     ) {
-        holder.bind(testItems[position])
+        holder.bind()
     }
 
     inner class TestRecyclerViewHolder(
         view: View
     ) : RecyclerView.ViewHolder(view) {
 
-        fun bind(testItem: TestItem) {
+        fun bind() {
 
         }
 
