@@ -126,7 +126,11 @@ class RecyclerViewStatesTest : BaseUITest() {
                 context(),
                 TestItem.collection()
             )
-        recyclerView.adapter?.notifyDataSetChanged()
+        recyclerView.adapter =
+            TestRecyclerViewAdapter(
+                context(),
+                emptyList()
+            )
 
         assertNull(
             recyclerView.messageView
