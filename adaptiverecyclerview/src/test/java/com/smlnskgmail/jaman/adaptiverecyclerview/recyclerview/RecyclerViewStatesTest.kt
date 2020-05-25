@@ -126,17 +126,21 @@ class RecyclerViewStatesTest : BaseUITest() {
                 context(),
                 TestItem.collection()
             )
+        isVisible(
+            recyclerView
+        )
+
         recyclerView.adapter =
             TestRecyclerViewAdapter(
                 context(),
                 emptyList()
             )
+        isGone(
+            recyclerView
+        )
 
         assertNull(
             recyclerView.messageView
-        )
-        isVisible(
-            recyclerView
         )
     }
 
