@@ -115,4 +115,24 @@ class RecyclerViewStatesTest : BaseUITest() {
         )
     }
 
+    @Test
+    fun checkNullMessageView() {
+        val recyclerView =
+            AdaptiveRecyclerView(
+                context()
+            )
+        recyclerView.adapter =
+            TestRecyclerViewAdapter(
+                context(),
+                TestItem.collection()
+            )
+
+        assertNull(
+            recyclerView.messageView
+        )
+        isVisible(
+            recyclerView
+        )
+    }
+
 }
