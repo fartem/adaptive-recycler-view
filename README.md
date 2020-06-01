@@ -1,6 +1,6 @@
 <img src="media/logo/ic_app.png" height="100px" />
 
-Adaptive Recycler View
+AdaptiveRecyclerView
 =============
 
 [![Travis CI](https://travis-ci.org/fartem/adaptive-recycler-view.svg?branch=master)](https://travis-ci.org/fartem/adaptive-recycler-view)
@@ -123,6 +123,11 @@ __Strings keys__
 | --- | --- |
 | `adaptive_message_view_text` | Message text |
 | `adaptive_message_view_content_description` | Image content description |
+
+Who using AdaptiveRecyclerView
+-------------
+
+* [Hash Checker](https://github.com/fartem/hash-checker)
 
 Demo
 -------------

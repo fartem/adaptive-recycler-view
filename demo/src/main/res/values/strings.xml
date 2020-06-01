@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Adaptive Recycler View Demo</string>
+    <string name="app_name">AdaptiveRecyclerViewDemo</string>
 
     <string name="text_message_list">Items list is empty!</string>
 
