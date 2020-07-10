@@ -1,7 +1,6 @@
 <img src="media/logo/ic_app.png" height="100px" />
 
-AdaptiveRecyclerView
-=============
+# AdaptiveRecyclerView
 
 [![Travis CI](https://travis-ci.org/fartem/adaptive-recycler-view.svg?branch=master)](https://travis-ci.org/fartem/adaptive-recycler-view)
 [![Codebeat](https://codebeat.co/badges/820d5883-5346-41c1-a827-594d470ab38a)](https://codebeat.co/projects/github-com-fartem-adaptive-recycler-view-master)
@@ -9,13 +8,11 @@ AdaptiveRecyclerView
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AdaptiveRecyclerView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/8036)
 [![Download](https://api.bintray.com/packages/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/images/download.svg?version=1.1.0)](https://bintray.com/fartem/android/com.smlnskgmail.jaman.adaptiverecyclerview/1.0.0/link)
 
-About
--------------
+## About
 
 Library for creating RecyclerView with warning message of data availability.
 
-Screenshots
--------------
+## Screenshots
 
 First screenshot - example of app state with an empty list of data.
 Second screenshot - example of app state with loaded items in RecyclerView.
@@ -26,8 +23,7 @@ Second screenshot - example of app state with loaded items in RecyclerView.
   <img src="media/screenshots/screenshot_02.png" width="250" />
 </p>
 
-Usage
--------------
+## Usage
 
 ### Gradle dependency
 
@@ -123,18 +119,15 @@ __Strings keys__
 | `adaptive_message_view_text` | Message text |
 | `adaptive_message_view_content_description` | Image content description |
 
-Who using AdaptiveRecyclerView
--------------
+## Who using AdaptiveRecyclerView
 
 * [Hash Checker](https://github.com/fartem/hash-checker)
 
-Demo
--------------
+## Demo
 
 <img src="media/qrcodes/github_download.png" height="150px" />
 
-How to contribute
--------------
+## How to contribute
 
 Read [Commit Convention](https://github.com/fartem/repository-rules/blob/master/commit-convention/COMMIT_CONVENTION.md). Make sure your build is green before you contribute your pull request. Then:
 
@@ -145,7 +138,6 @@ $ ./gradlew build
 
 If you don't see any error messages, submit your pull request.
 
-Contributors
--------------
+## Contributors
 
 * [@fartem](https://github.com/fartem) as Artem Fomchenkov
