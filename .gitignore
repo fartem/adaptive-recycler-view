@@ -62,4 +62,13 @@ fastlane/readme.md
 # OSX files
 .DS_Store
 
-/adaptiverecyclerview/bintray.gradle
+# Outputs
+app/release/
+app/debug/
+
+# Checkstyle
+checkstyle-result.xml
+
+# detekt
+detekt-config.yml
+
