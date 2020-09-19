@@ -52,6 +52,7 @@ implementation 'com.smlnskgmail.jaman:adaptiverecyclerview:<version>'
 
 ```xml
 <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveRecyclerView
+        android:id="@+id/adaptive_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
@@ -83,6 +84,7 @@ Must be declared in layout with AdaptiveRecyclerView.
 
 ```xml
 <com.smlnskgmail.jaman.adaptiverecyclerview.AdaptiveMessageView
+        android:id="@+id/adaptive_message_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         arv:message_image="@drawable/ic_error"
