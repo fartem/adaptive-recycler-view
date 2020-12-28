@@ -4,7 +4,7 @@ detekt {
     failFast = true
 
     def detektConfig = new File("$rootDir/detekt-config.yml")
-    if (InetAddress.getByName('www.github.com').isReachable(10_000)) {
+    if (InetAddress.getByName('www.github.com').isReachable(30_000)) {
         new URL(
                 'https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detekt.yml'
         ).withInputStream {
