@@ -4,11 +4,13 @@ detekt {
     failFast = true
 
     def detektConfig = new File("$rootDir/detekt-config.yml")
-    new URL(
-            'https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detekt.yml'
-    ).withInputStream {
-        i -> detektConfig.withOutputStream {
-            it << i
+    if (!detektConfig.exists()) {
+        new URL(
+                'https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detekt.yml'
+        ).withInputStream {
+            i -> detektConfig.withOutputStream {
+                it << i
+            }
         }
     }
 
