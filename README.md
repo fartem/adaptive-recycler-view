@@ -40,7 +40,7 @@ allprojects {
 In project level `build.gradle`:
 
 ```gradle
-implementation 'com.github.fartem:adaptive-recycler-view:master'
+implementation 'com.github.fartem:adaptive-recycler-view:1.1.1'
 ```
 
 ### AdaptiveRecyclerView
