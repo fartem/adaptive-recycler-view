@@ -10,12 +10,12 @@
 
 ## About
 
-Library for creating RecyclerView with warning message of data availability.
+Library that allows you to create RecyclerView with warning message of data availability.
 
 ## Screenshots
 
-First screenshot - example of app state with an empty list of data.
-Second screenshot - example of app state with loaded items in RecyclerView.
+First screenshot - example of screen's state with an empty list of data.
+Second screenshot - example of screen's state with loaded items in RecyclerView.
 
 <br/>
 <p align="center">
