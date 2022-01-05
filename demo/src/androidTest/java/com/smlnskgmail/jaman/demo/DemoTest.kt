@@ -16,19 +16,13 @@ class DemoTest {
 
     @Test
     fun checkItemsLoading() {
-        val adaptiveRecyclerView = activityTestRule.activity.findViewById<AdaptiveRecyclerView>(
-            R.id.demo_list
-        )
+        val adaptiveRecyclerView = activityTestRule.activity.findViewById<AdaptiveRecyclerView>(R.id.demo_list)
 
-        assertNull(
-            adaptiveRecyclerView.adapter
-        )
+        assertNull(adaptiveRecyclerView.adapter)
 
         refreshClick()
 
-        assertTrue(
-            adaptiveRecyclerView.adapter!!.itemCount > 0
-        )
+        assertTrue(adaptiveRecyclerView.adapter!!.itemCount > 0)
 
         refreshClick()
 
@@ -39,8 +33,7 @@ class DemoTest {
     }
 
     private fun refreshClick() {
-        onView(withId(R.id.demo_list_refresh))
-            .perform(click())
+        onView(withId(R.id.demo_list_refresh)).perform(click())
     }
 
 }

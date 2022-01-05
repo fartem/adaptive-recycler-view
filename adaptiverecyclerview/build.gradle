@@ -1,19 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: "com.github.dcendents.android-maven"
 apply from: 'detekt.gradle'
 apply from: 'jacoco.gradle'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.2'
+    compileSdkVersion 31
+    buildToolsVersion '31.0.0'
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 29
-        versionCode 1
-        versionName '1.1.1'
+        targetSdkVersion 31
     }
     buildTypes {
         debug {
@@ -43,10 +40,10 @@ tasks.withType(Test) {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
     // Unit tests
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
 
     // Robolectric
     testImplementation 'org.robolectric:robolectric:4.3.1'

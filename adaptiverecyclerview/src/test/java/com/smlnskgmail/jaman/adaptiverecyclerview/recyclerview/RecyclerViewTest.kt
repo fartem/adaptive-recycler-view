@@ -8,9 +8,7 @@ class RecyclerViewTest : BaseUITest() {
 
     @Test
     fun checkConstructors() {
-        AdaptiveRecyclerView(
-            context()
-        )
+        AdaptiveRecyclerView(context())
         AdaptiveRecyclerView(
             context(),
             null

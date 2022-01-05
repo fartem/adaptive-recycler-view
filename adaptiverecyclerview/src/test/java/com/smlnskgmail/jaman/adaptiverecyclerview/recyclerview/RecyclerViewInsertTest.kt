@@ -18,15 +18,11 @@ class RecyclerViewInsertTest : BaseUITest() {
 
     @Before
     fun setup() {
-        recyclerView =
-            AdaptiveRecyclerView(
-                context()
-            )
-        recyclerViewAdapter =
-            TestRecyclerViewAdapter(
-                context(),
-                testItems
-            )
+        recyclerView = AdaptiveRecyclerView(context())
+        recyclerViewAdapter = TestRecyclerViewAdapter(
+            context(),
+            testItems
+        )
         recyclerView.messageView = View(context())
         recyclerView.adapter = recyclerViewAdapter
 
@@ -42,12 +38,8 @@ class RecyclerViewInsertTest : BaseUITest() {
 
     @Test
     fun checkInsert() {
-        testItems.add(
-            TestItem()
-        )
-        recyclerViewAdapter.notifyItemInserted(
-            testItems.size - 1
-        )
+        testItems.add(TestItem())
+        recyclerViewAdapter.notifyItemInserted(testItems.size - 1)
 
         assertItemsCount()
     }

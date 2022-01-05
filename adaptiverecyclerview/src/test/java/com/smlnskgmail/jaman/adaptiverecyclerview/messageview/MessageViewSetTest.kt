@@ -17,39 +17,23 @@ class MessageViewSetTest : BaseUITest() {
 
     @Test
     fun checkForNonNullView() {
-        val recyclerView =
-            AdaptiveRecyclerView(
-                context
-            )
-        recyclerView.messageView =
-            AdaptiveMessageView(
-                context
-            )
+        val recyclerView = AdaptiveRecyclerView(context)
+        recyclerView.messageView = AdaptiveMessageView(context)
 
-        assertNotNull(
-            recyclerView.messageView
-        )
+        assertNotNull(recyclerView.messageView)
     }
 
     @Test(expected = IllegalStateException::class)
     fun checkForNullView() {
-        val adaptiveRecyclerView =
-            AdaptiveRecyclerView(
-                context
-            )
+        val adaptiveRecyclerView = AdaptiveRecyclerView(context)
         adaptiveRecyclerView.messageView = null
     }
 
     @Test
-    fun checImageSetup() {
-        val messageView =
-            AdaptiveMessageView(
-                context()
-            )
+    fun checkImageSetup() {
+        val messageView = AdaptiveMessageView(context())
 
-        messageView.setImage(
-            R.drawable.ic_adaptive_message_view_image
-        )
+        messageView.setImage(R.drawable.ic_adaptive_message_view_image)
         messageView.setImage(
             ContextCompat.getDrawable(
                 context(),
@@ -59,28 +43,21 @@ class MessageViewSetTest : BaseUITest() {
     }
 
     @Test
-    fun checTextSetup() {
-        val messageView =
-            AdaptiveMessageView(
-                context()
-            )
+    fun checkTextSetup() {
+        val messageView = AdaptiveMessageView(context())
         val messageTextView = messageView.adaptive_message_view_text
 
         var message = context().getString(
             R.string.adaptive_message_view_text
         )
-        messageView.setMessageText(
-            R.string.adaptive_message_view_text
-        )
+        messageView.setMessageText(R.string.adaptive_message_view_text)
         Assert.assertEquals(
             message,
             messageTextView.text.toString()
         )
 
         message = "Test text!"
-        messageView.setMessageText(
-            message
-        )
+        messageView.setMessageText(message)
         Assert.assertEquals(
             message,
             messageTextView.text.toString()
