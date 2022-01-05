@@ -1,15 +1,14 @@
 buildscript {
-    ext.kotlin_version = '1.3.72'
+    ext.kotlin_version = '1.5.20'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
-            url 'https://plugins.gradle.org/m2/'
+            url 'https://repo1.maven.org/maven2'
         }
     }
     dependencies {
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:7.0.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.hiya:jacoco-android:0.2'
     }
@@ -21,7 +20,9 @@ plugins {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
+        // Required to save compatibility with detekt
         jcenter()
     }
 }

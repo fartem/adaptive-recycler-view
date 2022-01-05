@@ -2,17 +2,15 @@ apply plugin: 'io.gitlab.arturbosch.detekt'
 
 detekt {
     failFast = true
-
     def detektConfig = new File("$rootDir/detekt-config.yml")
     if (!detektConfig.exists()) {
-        new URL(
-                'https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detekt.yml'
-        ).withInputStream {
-            i -> detektConfig.withOutputStream {
-                it << i
-            }
+        def configUrl = 'https://raw.githubusercontent.com/fartem/repository-rules/master/rules/kotlin/detekt/detekt.yml'
+        new URL(configUrl).withInputStream {
+            i ->
+                detektConfig.withOutputStream {
+                    it << i
+                }
         }
     }
-
     config = files(detektConfig)
 }

@@ -10,10 +10,7 @@ class TestRecyclerViewAdapter(
     private val testItems: List<TestItem>
 ) : RecyclerView.Adapter<TestRecyclerViewAdapter.TestRecyclerViewHolder>() {
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): TestRecyclerViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TestRecyclerViewHolder {
         return TestRecyclerViewHolder(View(context))
     }
 
@@ -21,16 +18,11 @@ class TestRecyclerViewAdapter(
         return testItems.size
     }
 
-    override fun onBindViewHolder(
-        holder: TestRecyclerViewHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: TestRecyclerViewHolder, position: Int) {
         holder.bind()
     }
 
-    inner class TestRecyclerViewHolder(
-        view: View
-    ) : RecyclerView.ViewHolder(view) {
+    inner class TestRecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind() {
 

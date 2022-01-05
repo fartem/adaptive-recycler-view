@@ -31,22 +31,15 @@ class MessageViewTest : BaseUITest() {
             )
             .build()
 
-        assertNotNull(
-            attrs
-        )
+        assertNotNull(attrs)
 
-        emptyAttrs = Robolectric.buildAttributeSet()
-            .build()
-        assertNotNull(
-            emptyAttrs
-        )
+        emptyAttrs = Robolectric.buildAttributeSet().build()
+        assertNotNull(emptyAttrs)
     }
 
     @Test
     fun checkConstructorWithoutAttrs() {
-        AdaptiveMessageView(
-            context()
-        )
+        AdaptiveMessageView(context())
     }
 
     @Test

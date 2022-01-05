@@ -47,10 +47,7 @@ class AdaptiveRecyclerView : RecyclerView {
 
     constructor(context: Context) : super(context)
 
-    constructor(
-        context: Context,
-        attrs: AttributeSet?
-    ) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
 
     constructor(
         context: Context,
@@ -70,9 +67,7 @@ class AdaptiveRecyclerView : RecyclerView {
         }
         super.setAdapter(adapter)
         if (adapter != null) {
-            adapter.registerAdapterDataObserver(
-                dataObserver
-            )
+            adapter.registerAdapterDataObserver(dataObserver)
             dataObserver.onChanged()
         }
     }

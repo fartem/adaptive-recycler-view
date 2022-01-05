@@ -20,10 +20,7 @@ class AdaptiveMessageView : LinearLayout {
 
     constructor(context: Context?) : super(context)
 
-    constructor(
-        context: Context?,
-        attrs: AttributeSet?
-    ) : super(context, attrs) {
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
         setAttrs(attrs, 0)
     }
 

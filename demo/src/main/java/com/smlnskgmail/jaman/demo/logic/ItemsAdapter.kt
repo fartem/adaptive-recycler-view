@@ -11,9 +11,7 @@ class ItemsAdapter(
     private val items: List<Item>
 ) : RecyclerView.Adapter<ItemsAdapter.ItemsHolder>() {
 
-    inner class ItemsHolder(
-        itemView: View
-    ) : RecyclerView.ViewHolder(itemView) {
+    inner class ItemsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(item: Item) {
             itemView.list_item_title.text = item.title
@@ -22,17 +20,11 @@ class ItemsAdapter(
 
     }
 
-    override fun onBindViewHolder(
-        holder: ItemsHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: ItemsHolder, position: Int) {
         holder.bind(items[position])
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ItemsHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsHolder {
         return ItemsHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.list_item,

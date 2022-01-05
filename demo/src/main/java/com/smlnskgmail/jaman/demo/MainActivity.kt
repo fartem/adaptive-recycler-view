@@ -9,46 +9,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private val items = listOf(
-        Item(
-            "New York",
-            "New York"
-        ),
-        Item(
-            "Los Angeles",
-            "California"
-        ),
-        Item(
-            "Chicago",
-            "Illinois"
-        ),
-        Item(
-            "Houston",
-            "Texas"
-        ),
-        Item(
-            "Phoenix",
-            "Arizona"
-        ),
-        Item(
-            "Philadelphia",
-            "Philadelphia"
-        ),
-        Item(
-            "San Antonio",
-            "Texas"
-        ),
-        Item(
-            "San Diego",
-            "California"
-        ),
-        Item(
-            "Dallas",
-            "Texas"
-        ),
-        Item(
-            "San Jose",
-            "California"
-        )
+        Item("New York", "New York"),
+        Item("Los Angeles", "California"),
+        Item("Chicago", "Illinois"),
+        Item("Houston", "Texas"),
+        Item("Phoenix", "Arizona"),
+        Item("Philadelphia", "Philadelphia"),
+        Item("San Antonio", "Texas"),
+        Item("San Diego", "California"),
+        Item("Dallas", "Texas"),
+        Item("San Jose", "California")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
