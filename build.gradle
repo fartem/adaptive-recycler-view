@@ -22,6 +22,8 @@ allprojects {
     repositories {
         mavenCentral()
         google()
+        // Required to save compatibility with detekt
+        jcenter()
     }
 }
 
