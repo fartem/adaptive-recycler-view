@@ -1,27 +1,28 @@
-## Checklist
+![IMG_20230718_024645_369](https://github.com/fartem/adaptive-recycler-view/assets/141127294/1a28f787-14da-4698-ba6d-cebdd56e6327)
+##                                 Контрольный список                               
 
-__Common__
+__Общая__
 
-- [ ] I am ran the app before creating PR
-- [ ] I am ran all tests before creating PR
+- [ ]                                 Я запускаю приложение перед созданием пиар                               
+- [ ]                               Перед созданием пиар я сдаю все тесты.                             
 
-__UI__
+__Ui__
 
-- [ ] I am ran the app for visual checks.
+- [ ]            Я запускаю приложение для визуальных проверки.          
 
-__Logic__
+__Логика__
 
-- [ ] I am tested basic app functionality.
+- [ ]            Я протестирован базовый функционал приложения.          
 
-## Changes
+##                 Изменения               
 
-Describe all changes here:
+Объяъяуйте все изменения здесь:
 
-- First;
-- Second;
-- Third;
-- ...
+-              Во-первых;            
+-          Во-вторых;        
+-        В-третьих;   В-третьих;      
+-   ... 
 
-## Comments
+##            Комментарии          
 
-Describe all additional information here.
+Опишите всю дополнительную информацию здесь.
